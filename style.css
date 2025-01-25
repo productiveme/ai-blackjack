@@ -1,0 +1,166 @@
+body {
+        font-family: sans-serif;
+        background-color: #228B22;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        background-color: #006400;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        max-width: 800px;
+        width: 100%;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    .balance {
+        margin-bottom: 5px;
+        font-size: 1.2em;
+    }
+
+    .deck-count {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+
+    .deck-selector {
+        margin-bottom: 10px;
+    }
+
+    .betting {
+        margin-bottom: 10px;
+    }
+
+    .betting label {
+        margin-right: 5px;
+    }
+
+    .betting input {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        color: black;
+    }
+
+    .game-area {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .player-area {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+
+    .hand {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        width: 50px;
+        height: 70px;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        font-size: 1.2em;
+        position: relative;
+    }
+
+    .card.deal-animation {
+        animation: dealCardAnimation 0.5s ease-in-out;
+    }
+
+    .card.hit-animation {
+        animation: hitCardAnimation 0.5s ease-in-out;
+    }
+
+    @keyframes dealCardAnimation {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes hitCardAnimation {
+        0% {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .controls button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .controls button:hover {
+        background-color: #45a049;
+    }
+
+    .message {
+        margin-top: 20px;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        .game-area {
+            flex-direction: column;
+        }
+        .player-area {
+            width: 100%;
+        }
+        .hand {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    .game-area > .hand {
+        width: 45%;
+    }
